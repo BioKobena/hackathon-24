@@ -4,6 +4,7 @@ import {
     Box,
     IconButton,
     Alert,
+    CircularProgress
 } from '@mui/material';
 import Typography from '@mui/material/Typography';
 import Table from '@mui/material/Table';
@@ -12,8 +13,6 @@ import TableCell from '@mui/material/TableCell';
 import TableContainer from '@mui/material/TableContainer';
 import TableHead from '@mui/material/TableHead';
 import TableRow from '@mui/material/TableRow';
-import DeleteIcon from "@mui/icons-material/Delete";
-import EditIcon from "@mui/icons-material/Edit";
 import Paper from '@mui/material/Paper';
 import axios from 'axios'
 import Swal from 'sweetalert2';
@@ -87,18 +86,7 @@ export default function ListStudent() {
                                             <TableCell align="left">{electeur.dateNaissMere}</TableCell>
                                             <TableCell align="left">{electeur.dateInscription}</TableCell>
                                             <TableCell align="left">
-                                                <IconButton
-                                                    onClick={() => console.log("Send message")}
-                                                    color="primary"
-                                                >
-                                                    <EditIcon />
-                                                </IconButton>
-                                                <IconButton
-                                                    onClick={() => handleDelete(electeur.id)}
-                                                    color="error"
-                                                >
-                                                    <DeleteIcon />
-                                                </IconButton>
+                                                <CircularProgress size={24} color="inherit" />
                                             </TableCell>
                                         </TableRow>
                                     )))}
