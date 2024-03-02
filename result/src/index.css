@@ -1,0 +1,14 @@
+html,
+body,
+#root {
+    height: 100%;
+    font-family: 'Montserrat', sans-serif;
+}
+
+* {
+    font-family: 'Montserrat', sans-serif;
+}
+
+canvas {
+    width: 100% !important;
+}
