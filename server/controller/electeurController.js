@@ -7,8 +7,6 @@ const numeroOrdre = () => {
 }
 
 exports.createElecteur = async (req, res) => {
-
-
     const {
         uniqueNum,
         nom,
@@ -24,8 +22,6 @@ exports.createElecteur = async (req, res) => {
         nomMere,
         prenomMere,
         dateNaissMere,
-        isVote,
-        dateInscription,
     } = req.body
 
     try {
@@ -63,7 +59,6 @@ exports.createElecteur = async (req, res) => {
                 dateInscription: new Date(),
             }
         })
-
         if (uniqueNum.length < 11) {
             res.status(404).json({ message: "Veuillez revoir le Numero nationale d'identification", success: "false", status: 404 })
         } else {
