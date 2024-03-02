@@ -14,14 +14,12 @@ function SideNav() {
     const navigate = useNavigate()
     const location = useLocation();
 
-
-
     const fontFamily = {
         fontFamily: "Montserrat",
         fontWeight: "600",
         color: "#000"
     }
-    
+
     const [localite, setLocalite] = useState("Boundali")
     const [agent, setAgent] = useState("Mohamed Boudali")
     return <Sidebar
@@ -40,10 +38,9 @@ function SideNav() {
             }}
         >
             <MenuItem active={location.pathname === "/"} component={<Link to="/" />} icon={<DashboardOutlinedIcon />}> <Typography variant="body2" sx={fontFamily}>Accueil</Typography> </MenuItem>
-            <MenuItem active={location.pathname === "/electeur"} component={<Link to="/electeur" />} icon={<FormatListNumberedIcon />}> <Typography variant="body2" sx={fontFamily}>Electeurs</Typography></MenuItem>
             <MenuItem active={location.pathname === "/inscription"} component={<Link to="/inscription" />} icon={<AddCircleIcon />}> <Typography variant="body2" sx={fontFamily}>Inscription </Typography></MenuItem >
+            <MenuItem active={location.pathname === "/electeur"} component={<Link to="/electeur" />} icon={<FormatListNumberedIcon />}> <Typography variant="body2" sx={fontFamily}>Electeurs</Typography></MenuItem>
         </Menu >
-
         <Box sx={styles.avatarContainer}>
             <Avatar sx={styles.avatar} alt="Masoud" src="https://cdn4.iconfinder.com/data/icons/small-n-flat/24/user-512.png" />
             {!collapsed ? <Typography variant="body2" sx={[styles.yourChannel, fontFamily]}> {agent} </Typography> : null}
