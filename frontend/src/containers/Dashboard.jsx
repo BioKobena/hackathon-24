@@ -16,9 +16,9 @@ function Dashboard() {
     const [localite, setLocalite] = useState("Boundiali")
 
     useEffect(() => {
-        const params = location.state
-        setLocalite(params.localite)
-        if (params) {
+        const params = location.state;
+        if (params && params.localite) {
+            setLocalite(params.localite);
             toast.success('Super, connexion ok');
         }
         console.log(params)
@@ -28,7 +28,7 @@ function Dashboard() {
             }).catch((error) => {
                 console.error(error)
             })
-    }, []);
+    }, [location.state]);
 
 
     const [chartData, setChartData] = useState({
