@@ -22,7 +22,7 @@ exports.createElecteur = async (req, res) => {
         nomMere,
         prenomMere,
         dateNaissMere,
-    } = req.body
+    } = req.body;
 
     try {
         const existingElecteur = await Electeur.findUnique({
@@ -33,8 +33,9 @@ exports.createElecteur = async (req, res) => {
 
         if (existingElecteur) {
             return res.status(400).json({
-                message: "Un électeur avec ce numéro d'identification existe déjà.",
                 success: false,
+                message: "Un électeur avec ce numéro d'identification existe déjà.",
+                status: 400
             });
         }
 
@@ -57,20 +58,31 @@ exports.createElecteur = async (req, res) => {
                 dateNaissMere,
                 isVote: false,
                 dateInscription: new Date(),
-            }
-        })
+            },
+        });
+
         if (uniqueNum.length < 11) {
-            res.status(404).json({ message: "Veuillez revoir le Numero nationale d'identification", success: "false", status: 404 })
+            return res.status(404).json({
+                success: false,
+                message: "Veuillez revoir le Numero nationale d'identification",
+            });
         } else {
-            console.log(createElecteur)
-            res.status(201).json({ message: "Succès", success: "true", status: 200, createElecteur })
+            console.log(createElecteur);
+            return res.status(201).json({
+                success: true,
+                message: "Enregistrement de l'électeur effectué avec succès !",
+                data: createElecteur,
+            });
         }
     } catch (error) {
-        console.error(error)
-        res.status(500).json({ error: "Erreur lors de la création d'un site" })
+        console.error(error);
+        return res.status(500).json({
+            success: false,
+            message: "Erreur lors de la création d'un site",
+        });
     }
+};
 
-}
 
 exports.getAllElecteurs = async (req, res) => {
     try {

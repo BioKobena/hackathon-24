@@ -221,6 +221,8 @@ function Dashboard() {
             nul: 3
         },
 
+        // ... Ajoute d'autres données selon tes besoins
+
     ];
 
     const filteredCities = citiesData.filter((city) =>
@@ -257,21 +259,23 @@ function Dashboard() {
 
                 <Box style={{ display: "flex", flexDirection: "row", justifyContent: "center", alignItems: "center", gap: 15, flexWrap: "wrap" }}>
                     {filteredCities.map((city) => (
-                        <Paper key={city.name} sx={{ padding: 2, marginBottom: 2 }}>
+                        <Paper key={city.name} sx={{ padding: 0.5, marginBottom: 1 }}>
                             <Typography style={{ textAlign: "center", fontFamily: "Montserrat", fontWeight: "800", color: "#FF7200" }} variant="h5">{city.name}</Typography>
                             <Grid container spacing={2} sx={{ display: "flex", flexDirection: "row", justifyContent: "center", alignItems: "center" }}>
                                 {city.candidates.map((candidate) => (
-                                    <Grid key={candidate.id} item xs={6} md={6} lg={6} xl={6}>
-                                        <Avatar src={candidate.photo} alt={candidate.name} sx={{ width: 100, height: 100, marginBottom: 2, fontWeight: "800", fontFamily: "Montserrat" }} />
-                                        <Typography variant="h6" sx={{ textAlign: "center", fontFamily: "Montserrat" }}>
-                                            {candidate.name}
-                                        </Typography>
-                                        <Alert severity="success"> {candidate.votes} voix</Alert>
+                                    <Grid style={{ display: "flex", flexDirection: "column", justifyContent: "center", alignItems: "center" }} key={candidate.id} item xs={6} md={6} lg={6} xl={6}>
+                                        <Grid style={{ textAlign: "center", display: "flex", flexDirection: "column" }}>
+                                            <Avatar src={candidate.photo} alt={candidate.name} sx={{ width: 100, height: 100, marginBottom: 2, fontWeight: "800", fontFamily: "Montserrat" }} />
+                                            <Typography variant="h6" sx={{ textAlign: "center", fontFamily: "Montserrat" }}>
+                                                {candidate.name}
+                                            </Typography>
+                                        </Grid>
+                                        <Alert sx={{ width: 120, fontWeight: "bold" }} severity="success"> {candidate.votes} voix</Alert>
                                     </Grid>
                                 ))}
-                                <Grid style={{ display: "flex", justifyContent: "center", alignItems: "center", gap: 5 }}>
-                                    <Alert style={{ margin: 5 }} severity="warning">{city.nul}</Alert>
-                                    <Button variant="contained">Voir plus</Button>
+                                <Grid style={{ display: "flex", flexDirection: "row", justifyContent: "space-around", alignItems: "center" }}>
+                                    <Alert sx={{ width: 120 }} style={{ margin: 5 }} severity="warning">{city.nul.length == 0 || city.nul.length == 1 ? `${city.nul} nul` : `${city.nul} nuls`}</Alert>
+                                    <Button sx={{ width: 120, height: 45 }} variant="contained">Voir plus</Button>
                                 </Grid>
                             </Grid>
                         </Paper>

@@ -25,8 +25,7 @@ function AppHeader() {
             </IconButton>
             <Box
                 component={'img'}
-                sx={{width:35, height:35,}}
-                // sx={styles.appLogo}
+                sx={{width:35, height:35, marginLeft:10}}
                 src="https://upload.wikimedia.org/wikipedia/commons/thumb/f/fe/Flag_of_C%C3%B4te_d%27Ivoire.svg/1200px-Flag_of_C%C3%B4te_d%27Ivoire.svg.png"
                 />
             <Box

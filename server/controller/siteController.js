@@ -28,18 +28,22 @@ exports.createSite = async (req, res) => {
 }
 
 exports.siteAuth = async (req, res) => {
-    const { password } = req.body;
+    const { identifiant, password } = req.body;
+
     try {
-        const siteAuth = await Site.findFirst({
+        const site = await Site.findUnique({
             where: {
-                password
+                identifiant
             }
         });
-        
-        res.status(200).json({ success: true, message: 'Authentification réussie', siteAuth });
+
+        if (!site || password !== site.password) {
+            return res.status(401).json({ success: false, message: 'Identifiant ou mot de passe incorrect' });
+        }
+
+        res.json({ success: true, message: 'Connexion réussie', site });
     } catch (error) {
         console.error(error);
         res.status(500).json({ success: false, error: 'Erreur lors de l\'authentification' });
     }
 };
-

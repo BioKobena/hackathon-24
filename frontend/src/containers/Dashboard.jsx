@@ -14,10 +14,13 @@ function Dashboard() {
     const [electeur, setElecteur] = useState(0);
     const location = useLocation()
     const [localite, setLocalite] = useState("Boundiali")
+    const [hasConnected, setHasConnected] = useState(false);
 
     useEffect(() => {
         const params = location.state;
-        if (params && params.localite) {
+        console.log(params)
+        if (params && params.localite && !hasConnected) {
+            // setHasConnected(true); // Commentez ou retirez cette ligne
             setLocalite(params.localite);
             toast.success('Super, connexion ok');
         }
@@ -28,7 +31,7 @@ function Dashboard() {
             }).catch((error) => {
                 console.error(error)
             })
-    }, [location.state]);
+    }, [location.state, hasConnected]);
 
 
     const [chartData, setChartData] = useState({
@@ -50,26 +53,26 @@ function Dashboard() {
     const containerDataInfo = { display: "flex", justifyContent: "center", alignItems: "center" }
     return (
         <Box>
-            <Typography style={{ fontFamily: "Montserrat", fontWeight: "400", textAlign: "center" }} sx={styles.pageTitle} variant="h4">
-                Bienvenue sur votre espace de connexion de <p style={{ marginTop: 0, color: "#FF7F00", fontWeight: "bold" }}> {localite ? localite : 'Votre localite'} </p>
+            <Typography style={{ fontFamily: "Montserrat", fontWeight: "400", textAlign: "center", marginTop: 35 }} sx={styles.pageTitle} variant="h4">
+                Bienvenue sur votre espace de connexion de <span style={{ marginTop: 0, color: "#FF7F00", fontWeight: "bold" }}> {localite ? localite : 'Votre localite'} </span>
             </Typography>
             <CardContent>
                 <Grid container spacing={3} style={containerDataInfo}>
-                    <Grid item xs={19} sm={3} md={3}>
+                    <Grid item xs={19} md={3}>
                         <AppWidgetSummary
                             title="Electeurs"
                             total={electeur > 0 ? electeur : '0'}
                             color="info"
                         />
                     </Grid>
-                    <Grid item xs={19} sm={3} md={3}>
+                    <Grid item xs={19} md={3}>
                         <AppWidgetSummary
                             title="Electeurs"
                             total={electeur > 0 ? electeur : '0'}
                             color="info"
                         />
                     </Grid>
-                    <Grid item xs={19} sm={3} md={3}>
+                    <Grid item xs={19} md={3}>
                         <AppWidgetSummary
                             title="Electeurs"
                             total={electeur > 0 ? electeur : '0'}
@@ -77,132 +80,10 @@ function Dashboard() {
                         />
                     </Grid>
                     <Chart options={chartData.options} series={chartData.series} type="bar" width={500} height={320} />
-
-                    {/* 
-                    <div className="row">
-                        <div className="mixed-chart">
-                            <Chart
-                                options={chartData.options}
-                                series={chartData.series}
-                                type="bar"
-                                width="500"
-                            />
-                        </div>
-                    </div> */}
                 </Grid>
 
             </CardContent>
-            {/* 
-            <Box sx={styles.columnsContainer}>
-                <LatestVideoCard sx={styles.item} />
-                <Card sx={styles.item}>
-                    <CardContent>
-                        <Typography variant="cardTitle">Latest comments</Typography>
-                        <ColorText color="neutral.normal"><Typography variant="h7">Channel comments I haven't responded to</Typography></ColorText>
 
-                        <Box sx={styles.commentRow}>
-                            <Avatar sx={styles.avatar} alt="Masoud" src="src/assets/avatars/masoud.jpeg" />
-                            <Box>
-                                <Box sx={styles.commentDetailsSection}>
-                                    <Typography sx={styles.postMeta}>React with Masoud</Typography>
-                                    <Typography sx={styles.postMeta}>2 weeks ago</Typography>
-                                </Box>
-
-                                <Typography sx={styles.commentText}>
-                                    Get tips from a successful creator on how to take a YouTube channel and turn it into a business that earns you money
-                                </Typography>
-                            </Box>
-                            <Box
-                                component="img"
-                                sx={styles.videoThumbnail}
-                                src="src/assets/thumbnail.png"
-                            />
-
-                        </Box>
-                        <Divider sx={styles.divider} />
-                        <Box sx={styles.commentRow}>
-                            <Avatar sx={styles.avatar} alt="Masoud" src="src/assets/avatars/masoud.jpeg" />
-
-                            <Box>
-                                <Box sx={styles.commentDetailsSection}>
-                                    <Typography sx={styles.postMeta}>React with Masoud</Typography>
-                                    <Typography sx={styles.postMeta}>2 weeks ago</Typography>
-                                </Box>
-
-                                <Typography sx={styles.commentText}>
-                                    How can I deploy this?
-                                </Typography>
-                            </Box>
-                            <Box
-                                component="img"
-                                sx={styles.videoThumbnail}
-                                src="src/assets/thumbnail.png"
-                            />
-
-                        </Box>
-                        <Divider sx={styles.divider} />
-                        <Box sx={styles.commentRow}>
-                            <Avatar sx={styles.avatar} alt="Masoud" src="src/assets/avatars/masoud.jpeg" />
-                            <Box>
-                                <Box sx={styles.commentDetailsSection}>
-                                    <Typography sx={styles.postMeta}>React with Masoud</Typography>
-                                    <Typography sx={styles.postMeta}>2 weeks ago</Typography>
-                                </Box>
-
-                                <Typography sx={styles.commentText}>
-                                    Thank you, was very helpful.
-                                </Typography>
-                            </Box>
-
-                            <Box
-                                component="img"
-                                sx={styles.videoThumbnail}
-                                src="src/assets/thumbnail.png"
-                            />
-
-                        </Box>
-
-
-                        <Typography sx={styles.cardAction} variant="link">VIEW MORE</Typography>
-                    </CardContent>
-                </Card>
-
-                <Card sx={styles.item}>
-                    <CardContent sx={styles.ideaContent}>
-                        <Box>
-                            <Typography variant="cardTitle">Ideas for you</Typography>
-                            <Typography sx={styles.ideaQuestion}>Ready to get business savvy?</Typography>
-                            <Typography variant="h7">
-                                Get tips from a successful creator on how to take a YouTube channel and turn it into a business that earns you money
-                            </Typography>
-                            <Typography sx={styles.cardAction} variant="link">GET STARTED NOW</Typography>
-                        </Box>
-                        <Box
-                            component="img"
-                            sx={styles.ideaImage}
-                            src="src/assets/study-icon.png"
-                        />
-                    </CardContent>
-                </Card>
-
-                <Card sx={styles.item}>
-                    <CardContent sx={styles.ideaContent}>
-                        <Box>
-                            <Typography variant="cardTitle">Creator Insider</Typography>
-                            <Box
-                                component="img"
-                                sx={styles.insiderImage}
-                                src="src/assets/thumbnail2.png"
-                            />
-                            <Typography sx={styles.ideaQuestion}>Ready to boost your skills using AI tools?</Typography>
-                            <Typography variant="h7">
-                                Get tips from a successful creator on how to take a YouTube channel and turn it into a business that earns you money
-                            </Typography>
-                            <Typography sx={styles.cardAction} variant="link">WATCH ON YOUTUBE</Typography>
-                        </Box>
-                    </CardContent>
-                </Card>
-            </Box> */}
             <ToastContainer />
         </Box>
     );

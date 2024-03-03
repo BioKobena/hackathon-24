@@ -12,6 +12,7 @@ import Typography from '@mui/material/Typography';
 import { createTheme, ThemeProvider } from '@mui/material/styles';
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
+import CircularProgress from '@mui/material/CircularProgress';
 import axios from 'axios'
 
 const defaultTheme = createTheme();
@@ -23,24 +24,19 @@ export default function Login() {
     const [password, setPassword] = useState('')
     const navigation = useNavigate()
     const [btnLoading, setBtnLoading] = useState(false)
+
     const handleSubmit = async (event) => {
         event.preventDefault();
 
         try {
-            setBtnLoading(true)
-            const response = await axios('http://localhost:8000/authSite', {
-                method: 'POST',
-                headers: {
-                    'Content-Type': 'application/json',
-                },
-                body: JSON.stringify({ identifiant, password }),
-            });
-
-            const data = response.data
-            // console.log(data)
-            const params = response.data.siteAuth
-            console.log(response.data.siteAuth)
-            if (response.data.success == true) {
+            setBtnLoading(true);
+            const response = await axios.post('http://localhost:8000/authSite', { identifiant, password });
+            console.log(response);
+            const data = response.data;
+            const params = response.data.site;
+            console.log(params);
+            console.log(response.data.siteAuth);
+            if (response.data.success === true) {
                 navigation('/', { state: params });
                 toast.success('Super, bienvenue sur la plateforme IPIF Admin');
             } else {
@@ -49,6 +45,8 @@ export default function Login() {
         } catch (error) {
             console.error(error);
             toast.error('Une erreur est survenue lors de l\'authentification');
+        } finally {
+            setBtnLoading(false); 
         }
     };
 
@@ -71,7 +69,7 @@ export default function Login() {
                         backgroundPosition: 'center',
                     }}
                 />
-                <Grid style={{ marginLeft: 0 }} item xs={12} sm={8} md={5} component={Paper} elevation={6} square>
+                <Grid style={{ marginLeft: 0 }} item xs={12} sm={8} md={5} component={Paper} elevation={0} square>
                     <Box
                         sx={{
                             my: 20,
@@ -99,7 +97,7 @@ export default function Login() {
                                     id="identifiant"
                                     label="Identifiant"
                                     name="identifiant"
-                                    autoComplete="identifiant"
+                                    autoComplete='off'
                                     autoFocus
                                     value={identifiant}
                                     onChange={(e) => setIdentifiant(e.target.value)}
@@ -116,6 +114,7 @@ export default function Login() {
                                     label="Mot de passe"
                                     type="password"
                                     id="password"
+
                                     autoComplete="current-password"
                                 />
                             </Grid>
@@ -130,10 +129,19 @@ export default function Login() {
                                         padding: 1.5,
                                         background: "#027314",
                                         fontWeight: "bold",
+                                        position: 'relative', // Ajoutez cette ligne pour positionner le spinner
                                     }}
+                                    disabled={btnLoading}
                                 >
-                                    Se connecter
-                                    {/* {btnLoading ? <div>Se connecter</div> : <div>Chargement...</div>} */}
+                                    {btnLoading ? (
+                                        <CircularProgress
+                                            color="inherit"
+                                            size={20} // Choisissez la taille du spinner
+                                            sx={{ position: 'absolute', top: '50%', left: '50%', transform: 'translate(-50%, -50%)' }} // Positionne le spinner au centre du bouton
+                                        />
+                                    ) : (
+                                        'Se connecter'
+                                    )}
                                 </Button>
                             </Grid>
                         </Box>

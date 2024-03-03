@@ -53,15 +53,23 @@ export default function Etudiant() {
   const handleSubmit = async (event) => {
     event.preventDefault();
     setLoading(true);
+    if (formData.uniqueNum.length !== 11) {
+      Swal.fire({
+        title: 'Erreur',
+        text: "Le numéro d'identification doit contenir exactement 11 caractères.",
+        icon: 'error',
+      });
+      return; // Arrête la fonction si la longueur est incorrecte
+    }
     try {
       const response = await axios.post('http://localhost:8000/createElecteur', formData);
-      if (response.status == 200) {
+
+      if (response.data.success) {
         Swal.fire({
-          title: response.message,
-          text: 'Formulaire enregistré avec succès dans la base de données!',
+          title: 'Succès',
+          text: response.data.message,
           icon: 'success',
-        })
-        console.log(response)
+        });
         setFormData({
           uniqueNum: '',
           nom: '',
@@ -69,49 +77,37 @@ export default function Etudiant() {
           sexe: '',
           dateNaiss: '',
           lieuNaissance: '',
-          typeEtudiant: '',
-          serieBAC: '',
-          lieuResidence: '',
-          contact: '',
-          namePere: '',
-          contactPere: '',
-          nameMere: '',
-          contactMere: '',
-        })
-      }
-      console.log(response.status)
-      if (response.status == 400) {
+          profession: '',
+          domicile: '',
+          nomPere: '',
+          prenomPere: '',
+          dateNaissPere: '',
+          nomMere: '',
+          prenomMere: '',
+          dateNaissMere: '',
+        });
+      } else if (response.status == 400) {
+        console.log(response.data.message)
         Swal.fire({
           title: 'Erreur',
-          text: response.data.message,
-          icon: 'info',
-        })
-      }
-      if (response.status == 404) {
-        Swal.fire({
-          title: response.data.message,
-          text: response.message,
-          icon: 'success',
-        })
-      } else {
-        console.error('Erreur lors de l\'enregistrement du formulaire dans la base de données');
-        Swal.fire({
-          title: 'Super',
-          text: 'Enregistrement éffectué avec succès',
-          icon: 'success',
+          text: "Cette personne existe déjà !",
+          icon: 'error',
         });
       }
     } catch (error) {
       console.error('Erreur lors de la requête vers le serveur:', error);
+
+      console.log(error.response.data);
       Swal.fire({
-        title: error,
-        text: 'Erreur lors de la requête vers le serveur',
+        title: 'Erreur',
+        text: error.response.data.message,
         icon: 'error',
-      })
+      });
     } finally {
       setLoading(false);
     }
   };
+
 
 
   return (
@@ -144,13 +140,16 @@ export default function Etudiant() {
                       required
                       fullWidth
                       id="uniqueNum"
-                      label="Numéro nationale d'identification "
+                      label="Numéro nationale d'identification"
                       autoFocus
                       value={formData.uniqueNum}
                       onChange={handleChange}
                       variant="standard"
+                      error={formData.uniqueNum.length !== 11} 
+                      helperText={formData.uniqueNum.length !== 11 ? "Le numéro d'identification doit contenir exactement 11 caractères." : 'Le numéro est correct'}
                     />
                   </Grid>
+
                   <Grid item xs={12} sm={6}>
                     <TextField
                       name="nom"
