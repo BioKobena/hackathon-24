@@ -173,7 +173,7 @@ function Dashboard() {
             ],
             nul: 0
         },
-        {
+    {
             name: "Boundiali",
             candidates: [
                 { id: 1, name: "Bio Paul", photo: "https://media.licdn.com/dms/image/D4E03AQGa9sTQUC8tRQ/profile-displayphoto-shrink_800_800/0/1697301555895?e=1714608000&v=beta&t=_DEUTCJy5OuLH_t9_uRLim9z19ao22kb1FMfxUqakSU", votes: 40 },
