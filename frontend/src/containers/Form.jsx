@@ -108,8 +108,6 @@ export default function Etudiant() {
     }
   };
 
-
-
   return (
     <>
       {
@@ -145,7 +143,7 @@ export default function Etudiant() {
                       value={formData.uniqueNum}
                       onChange={handleChange}
                       variant="standard"
-                      error={formData.uniqueNum.length !== 11} 
+                      error={formData.uniqueNum.length !== 11}
                       helperText={formData.uniqueNum.length !== 11 ? "Le numéro d'identification doit contenir exactement 11 caractères." : 'Le numéro est correct'}
                     />
                   </Grid>

@@ -1,5 +1,5 @@
 
-import { AppBar, Badge, Box, IconButton, Toolbar, Typography } from "@mui/material";
+import { AppBar, Badge, Box, IconButton, Toolbar, Typography, Grid } from "@mui/material";
 import MenuIcon from '@mui/icons-material/Menu'
 import SettingsIcon from '@mui/icons-material/Settings';
 import LogoutIcon from '@mui/icons-material/Logout';
@@ -15,7 +15,11 @@ function AppHeader() {
             <IconButton onClick={() => broken ? toggleSidebar() : collapseSidebar()} color="red">
                 <MenuIcon />
             </IconButton>
-            <Typography variant="h4" style={{ color: "#027314", fontWeight: "600", fontFamily:"Montserrat" }}>Résultat électoral par région</Typography>
+            <Grid style={{ display: "flex", flexDirection: "column", justifyContent: "center", alignItems: "center" }}>
+                <Typography variant="h4" style={{ color: "#027314", fontWeight: "600", fontFamily: "Montserrat" }}>RÉSULTATS DES ÉLECTIONS PAR RÉGION</Typography>
+                <Typography variant="h5" style={{ color: "#FFF", fontWeight: "600", fontFamily: "Montserrat" }}>ÉLECTIONS PRÉSIDENTIELLES</Typography>
+                <Typography variant="h5" style={{ color: "#FF7200", fontWeight: "600", fontFamily: "Montserrat" }}>Scrutin du 3 Mars 2023</Typography>
+            </Grid>
             <Box
                 component={'img'}
                 sx={{ width: 45, height: 45, }}

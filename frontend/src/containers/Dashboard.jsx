@@ -18,13 +18,15 @@ function Dashboard() {
 
     useEffect(() => {
         const params = location.state;
-        console.log(params)
+        // console.log(params)
+        document.title = `Enrôllement des électeurs de ${params.localite}`
+
         if (params && params.localite && !hasConnected) {
             // setHasConnected(true); // Commentez ou retirez cette ligne
             setLocalite(params.localite);
-            toast.success('Super, connexion ok');
+            toast.success(`Bienvenue sur la page d'enrôllement de ${params.localite}`);
         }
-        console.log(params)
+        // console.log(params)
         axios.get('http://localhost:8000/electeurs')
             .then((data) => {
                 setElecteur(data.data.electeurs.length)
@@ -45,11 +47,18 @@ function Dashboard() {
         },
         series: [
             {
-                name: "series-1",
+                name: "Semaine du 30 Avril",
                 data: [30, 40, 45, 50, 49, 60, 70, 91]
             }
         ]
     });
+
+    const [secondChart, setSecondChart] = useState({
+        options: {},
+        series: [44, 55],
+        labels: ['Bahili Esli', 'Bio Paul',]
+    })
+
     const containerDataInfo = { display: "flex", justifyContent: "center", alignItems: "center" }
     return (
         <Box>
@@ -79,7 +88,11 @@ function Dashboard() {
                             color="info"
                         />
                     </Grid>
-                    <Chart options={chartData.options} series={chartData.series} type="bar" width={500} height={320} />
+
+                    <Grid style={{ display: "flex", justifyContent: "center", alignItems: "center", flexWrap: "wrap", marginTop: 100 }}>
+                        <Chart options={chartData.options} series={chartData.series} type="bar" width={500} height={320} />
+                        <Chart options={secondChart.options} series={secondChart.series} type="donut" width="380" />
+                    </Grid>
                 </Grid>
 
             </CardContent>
