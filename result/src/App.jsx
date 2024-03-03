@@ -30,7 +30,7 @@ function AuthenticatedApp() {
     <React.Fragment>
       <AppHeader />
       <div style={styles.container}>
-        <SideNav />
+        {/* <SideNav /> */}
         <div
           style={styles.mainSection}
         >

@@ -7,7 +7,7 @@ import StudentForm from '../containers/Inscription';
 const AppRoutes = () => {
     return <Routes>
         <Route path='/' element={<Dashboard />} />
-        <Route path='/electeur' element={<ListStudent/>} />
+        <Route path='/voirplus' element={<ListStudent/>} />
         <Route path='/inscription' element={<StudentForm />} />
     </Routes>
 };

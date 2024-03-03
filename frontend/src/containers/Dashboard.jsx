@@ -19,9 +19,9 @@ function Dashboard() {
     useEffect(() => {
         const params = location.state;
         // console.log(params)
-        document.title = `Enrôllement des électeurs de ${params.localite}`
 
         if (params && params.localite && !hasConnected) {
+            document.title = `Enrôllement des électeurs de ${params.localite}`
             // setHasConnected(true); // Commentez ou retirez cette ligne
             setLocalite(params.localite);
             toast.success(`Bienvenue sur la page d'enrôllement de ${params.localite}`);

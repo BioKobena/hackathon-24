@@ -5,6 +5,7 @@ import {
 import React, { useState, useEffect } from "react";
 import 'react-toastify/dist/ReactToastify.css';
 import resultat from './result.svg'
+import { useNavigate } from 'react-router-dom'
 
 function Dashboard() {
 
@@ -220,10 +221,13 @@ function Dashboard() {
             ],
             nul: 3
         },
-
-        // ... Ajoute d'autres données selon tes besoins
-
     ];
+
+
+    const navigate = useNavigate()
+    const handleVoir = () => {
+        navigate('/voirplus')
+    }
 
     const filteredCities = citiesData.filter((city) =>
         city.name.toLowerCase().includes(searchValue.toLowerCase())
@@ -275,7 +279,7 @@ function Dashboard() {
                                 ))}
                                 <Grid style={{ display: "flex", flexDirection: "row", justifyContent: "space-around", alignItems: "center" }}>
                                     <Alert sx={{ width: 120 }} style={{ margin: 5 }} severity="warning">{city.nul.length == 0 || city.nul.length == 1 ? `${city.nul} nul` : `${city.nul} nuls`}</Alert>
-                                    <Button sx={{ width: 120, height: 45 }} variant="contained">Voir plus</Button>
+                                    <Button sx={{ width: 120, height: 45 }} variant="contained" onClick={handleVoir}>Voir plus</Button>
                                 </Grid>
                             </Grid>
                         </Paper>
