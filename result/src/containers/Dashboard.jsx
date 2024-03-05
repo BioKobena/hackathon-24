@@ -24,7 +24,7 @@ function Dashboard() {
         {
             name: "Abidjan",
             candidates: [
-                { id: 1, name: "Bio Paul", photo: "https://media.licdn.com/dms/image/D4E03AQGa9sTQUC8tRQ/profile-displayphoto-shrink_800_800/0/1697301555895?e=1714608000&v=beta&t=_DEUTCJy5OuLH_t9_uRLim9z19ao22kb1FMfxUqakSU", votes: 30 },
+                { id: 1, name: "Bio Paul", photo: "https://biopaulkobena.netlify.app/images/portfolio-bio.png", votes: 30 },
                 { id: 2, name: "Bahili Esli", photo: "https://res.cloudinary.com/drrf4valz/image/upload/v1709415697/ix1mqnlqgpsaun2dghxd.jpg", votes: 20 },
             ],
             nul: 0
@@ -32,7 +32,7 @@ function Dashboard() {
         {
             name: "Bouaké",
             candidates: [
-                { id: 1, name: "Bio Paul", photo: "https://media.licdn.com/dms/image/D4E03AQGa9sTQUC8tRQ/profile-displayphoto-shrink_800_800/0/1697301555895?e=1714608000&v=beta&t=_DEUTCJy5OuLH_t9_uRLim9z19ao22kb1FMfxUqakSU", votes: 30 },
+                { id: 1, name: "Bio Paul", photo: "https://biopaulkobena.netlify.app/images/portfolio-bio.png", votes: 30 },
                 { id: 2, name: "Bahili Esli", photo: "https://res.cloudinary.com/drrf4valz/image/upload/v1709415697/ix1mqnlqgpsaun2dghxd.jpg", votes: 80 },
             ],
             nul: 5
@@ -40,7 +40,7 @@ function Dashboard() {
         {
             name: "Yamoussoukro",
             candidates: [
-                { id: 1, name: "Bio Paul", photo: "https://media.licdn.com/dms/image/D4E03AQGa9sTQUC8tRQ/profile-displayphoto-shrink_800_800/0/1697301555895?e=1714608000&v=beta&t=_DEUTCJy5OuLH_t9_uRLim9z19ao22kb1FMfxUqakSU", votes: 40 },
+                { id: 1, name: "Bio Paul", photo: "https://biopaulkobena.netlify.app/images/portfolio-bio.png", votes: 40 },
                 { id: 2, name: "Bahili Esli", photo: "https://res.cloudinary.com/drrf4valz/image/upload/v1709415697/ix1mqnlqgpsaun2dghxd.jpg", votes: 25 },
             ],
             nul: 2
@@ -48,7 +48,7 @@ function Dashboard() {
         {
             name: "San Pedro",
             candidates: [
-                { id: 1, name: "Bio Paul", photo: "https://media.licdn.com/dms/image/D4E03AQGa9sTQUC8tRQ/profile-displayphoto-shrink_800_800/0/1697301555895?e=1714608000&v=beta&t=_DEUTCJy5OuLH_t9_uRLim9z19ao22kb1FMfxUqakSU", votes: 60 },
+                { id: 1, name: "Bio Paul", photo: "https://biopaulkobena.netlify.app/images/portfolio-bio.png", votes: 60 },
                 { id: 2, name: "Bahili Esli", photo: "https://res.cloudinary.com/drrf4valz/image/upload/v1709415697/ix1mqnlqgpsaun2dghxd.jpg", votes: 15 },
             ],
             nul: 8
@@ -56,7 +56,7 @@ function Dashboard() {
         {
             name: "Korhogo",
             candidates: [
-                { id: 1, name: "Bio Paul", photo: "https://media.licdn.com/dms/image/D4E03AQGa9sTQUC8tRQ/profile-displayphoto-shrink_800_800/0/1697301555895?e=1714608000&v=beta&t=_DEUTCJy5OuLH_t9_uRLim9z19ao22kb1FMfxUqakSU", votes: 55 },
+                { id: 1, name: "Bio Paul", photo: "https://biopaulkobena.netlify.app/images/portfolio-bio.png", votes: 55 },
                 { id: 2, name: "Bahili Esli", photo: "https://res.cloudinary.com/drrf4valz/image/upload/v1709415697/ix1mqnlqgpsaun2dghxd.jpg", votes: 40 },
             ],
             nul: 3
@@ -64,7 +64,7 @@ function Dashboard() {
         {
             name: "Daloa",
             candidates: [
-                { id: 1, name: "Bio Paul", photo: "https://media.licdn.com/dms/image/D4E03AQGa9sTQUC8tRQ/profile-displayphoto-shrink_800_800/0/1697301555895?e=1714608000&v=beta&t=_DEUTCJy5OuLH_t9_uRLim9z19ao22kb1FMfxUqakSU", votes: 25 },
+                { id: 1, name: "Bio Paul", photo: "https://biopaulkobena.netlify.app/images/portfolio-bio.png", votes: 25 },
                 { id: 2, name: "Bahili Esli", photo: "https://res.cloudinary.com/drrf4valz/image/upload/v1709415697/ix1mqnlqgpsaun2dghxd.jpg", votes: 30 },
             ],
             nul: 1
@@ -72,7 +72,7 @@ function Dashboard() {
         {
             name: "Man",
             candidates: [
-                { id: 1, name: "Bio Paul", photo: "https://media.licdn.com/dms/image/D4E03AQGa9sTQUC8tRQ/profile-displayphoto-shrink_800_800/0/1697301555895?e=1714608000&v=beta&t=_DEUTCJy5OuLH_t9_uRLim9z19ao22kb1FMfxUqakSU", votes: 45 },
+                { id: 1, name: "Bio Paul", photo: "https://biopaulkobena.netlify.app/images/portfolio-bio.png", votes: 45 },
                 { id: 2, name: "Bahili Esli", photo: "https://res.cloudinary.com/drrf4valz/image/upload/v1709415697/ix1mqnlqgpsaun2dghxd.jpg", votes: 35 },
             ],
             nul: 4
@@ -80,7 +80,7 @@ function Dashboard() {
         {
             name: "Gagnoa",
             candidates: [
-                { id: 1, name: "Bio Paul", photo: "https://media.licdn.com/dms/image/D4E03AQGa9sTQUC8tRQ/profile-displayphoto-shrink_800_800/0/1697301555895?e=1714608000&v=beta&t=_DEUTCJy5OuLH_t9_uRLim9z19ao22kb1FMfxUqakSU", votes: 20 },
+                { id: 1, name: "Bio Paul", photo: "https://biopaulkobena.netlify.app/images/portfolio-bio.png", votes: 20 },
                 { id: 2, name: "Bahili Esli", photo: "https://res.cloudinary.com/drrf4valz/image/upload/v1709415697/ix1mqnlqgpsaun2dghxd.jpg", votes: 15 },
             ],
             nul: 0
@@ -88,7 +88,7 @@ function Dashboard() {
         {
             name: "Katiola",
             candidates: [
-                { id: 1, name: "Bio Paul", photo: "https://media.licdn.com/dms/image/D4E03AQGa9sTQUC8tRQ/profile-displayphoto-shrink_800_800/0/1697301555895?e=1714608000&v=beta&t=_DEUTCJy5OuLH_t9_uRLim9z19ao22kb1FMfxUqakSU", votes: 30 },
+                { id: 1, name: "Bio Paul", photo: "https://biopaulkobena.netlify.app/images/portfolio-bio.png", votes: 30 },
                 { id: 2, name: "Bahili Esli", photo: "https://res.cloudinary.com/drrf4valz/image/upload/v1709415697/ix1mqnlqgpsaun2dghxd.jpg", votes: 25 },
             ],
             nul: 2
@@ -96,7 +96,7 @@ function Dashboard() {
         {
             name: "Bondoukou",
             candidates: [
-                { id: 1, name: "Bio Paul", photo: "https://media.licdn.com/dms/image/D4E03AQGa9sTQUC8tRQ/profile-displayphoto-shrink_800_800/0/1697301555895?e=1714608000&v=beta&t=_DEUTCJy5OuLH_t9_uRLim9z19ao22kb1FMfxUqakSU", votes: 35 },
+                { id: 1, name: "Bio Paul", photo: "https://biopaulkobena.netlify.app/images/portfolio-bio.png", votes: 35 },
                 { id: 2, name: "Bahili Esli", photo: "https://res.cloudinary.com/drrf4valz/image/upload/v1709415697/ix1mqnlqgpsaun2dghxd.jpg", votes: 30 },
             ],
             nul: 1
@@ -104,7 +104,7 @@ function Dashboard() {
         {
             name: "Odienne",
             candidates: [
-                { id: 1, name: "Bio Paul", photo: "https://media.licdn.com/dms/image/D4E03AQGa9sTQUC8tRQ/profile-displayphoto-shrink_800_800/0/1697301555895?e=1714608000&v=beta&t=_DEUTCJy5OuLH_t9_uRLim9z19ao22kb1FMfxUqakSU", votes: 40 },
+                { id: 1, name: "Bio Paul", photo: "https://biopaulkobena.netlify.app/images/portfolio-bio.png", votes: 40 },
                 { id: 2, name: "Bahili Esli", photo: "https://res.cloudinary.com/drrf4valz/image/upload/v1709415697/ix1mqnlqgpsaun2dghxd.jpg", votes: 20 },
             ],
             nul: 3
@@ -112,7 +112,7 @@ function Dashboard() {
         {
             name: "Ferkessedougou",
             candidates: [
-                { id: 1, name: "Bio Paul", photo: "https://media.licdn.com/dms/image/D4E03AQGa9sTQUC8tRQ/profile-displayphoto-shrink_800_800/0/1697301555895?e=1714608000&v=beta&t=_DEUTCJy5OuLH_t9_uRLim9z19ao22kb1FMfxUqakSU", votes: 25 },
+                { id: 1, name: "Bio Paul", photo: "https://biopaulkobena.netlify.app/images/portfolio-bio.png", votes: 25 },
                 { id: 2, name: "Bahili Esli", photo: "https://res.cloudinary.com/drrf4valz/image/upload/v1709415697/ix1mqnlqgpsaun2dghxd.jpg", votes: 15 },
             ],
             nul: 0
@@ -120,7 +120,7 @@ function Dashboard() {
         {
             name: "Sassandra",
             candidates: [
-                { id: 1, name: "Bio Paul", photo: "https://media.licdn.com/dms/image/D4E03AQGa9sTQUC8tRQ/profile-displayphoto-shrink_800_800/0/1697301555895?e=1714608000&v=beta&t=_DEUTCJy5OuLH_t9_uRLim9z19ao22kb1FMfxUqakSU", votes: 18 },
+                { id: 1, name: "Bio Paul", photo: "https://biopaulkobena.netlify.app/images/portfolio-bio.png", votes: 18 },
                 { id: 2, name: "Bahili Esli", photo: "https://res.cloudinary.com/drrf4valz/image/upload/v1709415697/ix1mqnlqgpsaun2dghxd.jpg", votes: 22 },
             ],
             nul: 2
@@ -128,7 +128,7 @@ function Dashboard() {
         {
             name: "Grand-Bassam",
             candidates: [
-                { id: 1, name: "Bio Paul", photo: "https://media.licdn.com/dms/image/D4E03AQGa9sTQUC8tRQ/profile-displayphoto-shrink_800_800/0/1697301555895?e=1714608000&v=beta&t=_DEUTCJy5OuLH_t9_uRLim9z19ao22kb1FMfxUqakSU", votes: 28 },
+                { id: 1, name: "Bio Paul", photo: "https://biopaulkobena.netlify.app/images/portfolio-bio.png", votes: 28 },
                 { id: 2, name: "Bahili Esli", photo: "https://res.cloudinary.com/drrf4valz/image/upload/v1709415697/ix1mqnlqgpsaun2dghxd.jpg", votes: 30 },
             ],
             nul: 1
@@ -136,7 +136,7 @@ function Dashboard() {
         {
             name: "Aboisso",
             candidates: [
-                { id: 1, name: "Bio Paul", photo: "https://media.licdn.com/dms/image/D4E03AQGa9sTQUC8tRQ/profile-displayphoto-shrink_800_800/0/1697301555895?e=1714608000&v=beta&t=_DEUTCJy5OuLH_t9_uRLim9z19ao22kb1FMfxUqakSU", votes: 15 },
+                { id: 1, name: "Bio Paul", photo: "https://biopaulkobena.netlify.app/images/portfolio-bio.png", votes: 15 },
                 { id: 2, name: "Bahili Esli", photo: "https://res.cloudinary.com/drrf4valz/image/upload/v1709415697/ix1mqnlqgpsaun2dghxd.jpg", votes: 20 },
             ],
             nul: 0
@@ -144,7 +144,7 @@ function Dashboard() {
         {
             name: "Agboville",
             candidates: [
-                { id: 1, name: "Bio Paul", photo: "https://media.licdn.com/dms/image/D4E03AQGa9sTQUC8tRQ/profile-displayphoto-shrink_800_800/0/1697301555895?e=1714608000&v=beta&t=_DEUTCJy5OuLH_t9_uRLim9z19ao22kb1FMfxUqakSU", votes: 22 },
+                { id: 1, name: "Bio Paul", photo: "https://biopaulkobena.netlify.app/images/portfolio-bio.png", votes: 22 },
                 { id: 2, name: "Bahili Esli", photo: "https://res.cloudinary.com/drrf4valz/image/upload/v1709415697/ix1mqnlqgpsaun2dghxd.jpg", votes: 18 },
             ],
             nul: 1
@@ -152,7 +152,7 @@ function Dashboard() {
         {
             name: "Dabou",
             candidates: [
-                { id: 1, name: "Bio Paul", photo: "https://media.licdn.com/dms/image/D4E03AQGa9sTQUC8tRQ/profile-displayphoto-shrink_800_800/0/1697301555895?e=1714608000&v=beta&t=_DEUTCJy5OuLH_t9_uRLim9z19ao22kb1FMfxUqakSU", votes: 30 },
+                { id: 1, name: "Bio Paul", photo: "https://biopaulkobena.netlify.app/images/portfolio-bio.png", votes: 30 },
                 { id: 2, name: "Bahili Esli", photo: "https://res.cloudinary.com/drrf4valz/image/upload/v1709415697/ix1mqnlqgpsaun2dghxd.jpg", votes: 25 },
             ],
             nul: 3
@@ -160,7 +160,7 @@ function Dashboard() {
         {
             name: "Dimbokro",
             candidates: [
-                { id: 1, name: "Bio Paul", photo: "https://media.licdn.com/dms/image/D4E03AQGa9sTQUC8tRQ/profile-displayphoto-shrink_800_800/0/1697301555895?e=1714608000&v=beta&t=_DEUTCJy5OuLH_t9_uRLim9z19ao22kb1FMfxUqakSU", votes: 40 },
+                { id: 1, name: "Bio Paul", photo: "https://biopaulkobena.netlify.app/images/portfolio-bio.png", votes: 40 },
                 { id: 2, name: "Bahili Esli", photo: "https://res.cloudinary.com/drrf4valz/image/upload/v1709415697/ix1mqnlqgpsaun2dghxd.jpg", votes: 35 },
             ],
             nul: 2
@@ -168,7 +168,7 @@ function Dashboard() {
         {
             name: "Tiassale",
             candidates: [
-                { id: 1, name: "Bio Paul", photo: "https://media.licdn.com/dms/image/D4E03AQGa9sTQUC8tRQ/profile-displayphoto-shrink_800_800/0/1697301555895?e=1714608000&v=beta&t=_DEUTCJy5OuLH_t9_uRLim9z19ao22kb1FMfxUqakSU", votes: 28 },
+                { id: 1, name: "Bio Paul", photo: "https://biopaulkobena.netlify.app/images/portfolio-bio.png", votes: 28 },
                 { id: 2, name: "Bahili Esli", photo: "https://res.cloudinary.com/drrf4valz/image/upload/v1709415697/ix1mqnlqgpsaun2dghxd.jpg", votes: 22 },
             ],
             nul: 0
@@ -176,7 +176,7 @@ function Dashboard() {
     {
             name: "Boundiali",
             candidates: [
-                { id: 1, name: "Bio Paul", photo: "https://media.licdn.com/dms/image/D4E03AQGa9sTQUC8tRQ/profile-displayphoto-shrink_800_800/0/1697301555895?e=1714608000&v=beta&t=_DEUTCJy5OuLH_t9_uRLim9z19ao22kb1FMfxUqakSU", votes: 40 },
+                { id: 1, name: "Bio Paul", photo: "https://biopaulkobena.netlify.app/images/portfolio-bio.png", votes: 40 },
                 { id: 2, name: "Bahili Esli", photo: "https://res.cloudinary.com/drrf4valz/image/upload/v1709415697/ix1mqnlqgpsaun2dghxd.jpg", votes: 30 },
             ],
             nul: 1
@@ -184,7 +184,7 @@ function Dashboard() {
         {
             name: "Odienné",
             candidates: [
-                { id: 1, name: "Bio Paul", photo: "https://media.licdn.com/dms/image/D4E03AQGa9sTQUC8tRQ/profile-displayphoto-shrink_800_800/0/1697301555895?e=1714608000&v=beta&t=_DEUTCJy5OuLH_t9_uRLim9z19ao22kb1FMfxUqakSU", votes: 50 },
+                { id: 1, name: "Bio Paul", photo: "https://biopaulkobena.netlify.app/images/portfolio-bio.png", votes: 50 },
                 { id: 2, name: "Bahili Esli", photo: "https://res.cloudinary.com/drrf4valz/image/upload/v1709415697/ix1mqnlqgpsaun2dghxd.jpg", votes: 20 },
             ],
             nul: 5
@@ -192,7 +192,7 @@ function Dashboard() {
         {
             name: "Abengourou",
             candidates: [
-                { id: 1, name: "Bio Paul", photo: "https://media.licdn.com/dms/image/D4E03AQGa9sTQUC8tRQ/profile-displayphoto-shrink_800_800/0/1697301555895?e=1714608000&v=beta&t=_DEUTCJy5OuLH_t9_uRLim9z19ao22kb1FMfxUqakSU", votes: 35 },
+                { id: 1, name: "Bio Paul", photo: "https://biopaulkobena.netlify.app/images/portfolio-bio.png", votes: 35 },
                 { id: 2, name: "Bahili Esli", photo: "https://res.cloudinary.com/drrf4valz/image/upload/v1709415697/ix1mqnlqgpsaun2dghxd.jpg", votes: 40 },
             ],
             nul: 3
@@ -200,7 +200,7 @@ function Dashboard() {
         {
             name: "Bingerville",
             candidates: [
-                { id: 1, name: "Bio Paul", photo: "https://media.licdn.com/dms/image/D4E03AQGa9sTQUC8tRQ/profile-displayphoto-shrink_800_800/0/1697301555895?e=1714608000&v=beta&t=_DEUTCJy5OuLH_t9_uRLim9z19ao22kb1FMfxUqakSU", votes: 28 },
+                { id: 1, name: "Bio Paul", photo: "https://biopaulkobena.netlify.app/images/portfolio-bio.png", votes: 28 },
                 { id: 2, name: "Bahili Esli", photo: "https://res.cloudinary.com/drrf4valz/image/upload/v1709415697/ix1mqnlqgpsaun2dghxd.jpg", votes: 32 },
             ],
             nul: 2
@@ -208,7 +208,7 @@ function Dashboard() {
         {
             name: "Divo",
             candidates: [
-                { id: 1, name: "Bio Paul", photo: "https://media.licdn.com/dms/image/D4E03AQGa9sTQUC8tRQ/profile-displayphoto-shrink_800_800/0/1697301555895?e=1714608000&v=beta&t=_DEUTCJy5OuLH_t9_uRLim9z19ao22kb1FMfxUqakSU", votes: 22 },
+                { id: 1, name: "Bio Paul", photo: "https://biopaulkobena.netlify.app/images/portfolio-bio.png", votes: 22 },
                 { id: 2, name: "Bahili Esli", photo: "https://res.cloudinary.com/drrf4valz/image/upload/v1709415697/ix1mqnlqgpsaun2dghxd.jpg", votes: 18 },
             ],
             nul: 1
@@ -216,7 +216,7 @@ function Dashboard() {
         {
             name: "Séguéla",
             candidates: [
-                { id: 1, name: "Bio Paul", photo: "https://media.licdn.com/dms/image/D4E03AQGa9sTQUC8tRQ/profile-displayphoto-shrink_800_800/0/1697301555895?e=1714608000&v=beta&t=_DEUTCJy5OuLH_t9_uRLim9z19ao22kb1FMfxUqakSU", votes: 38 },
+                { id: 1, name: "Bio Paul", photo: "https://biopaulkobena.netlify.app/images/portfolio-bio.png", votes: 38 },
                 { id: 2, name: "Bahili Esli", photo: "https://res.cloudinary.com/drrf4valz/image/upload/v1709415697/ix1mqnlqgpsaun2dghxd.jpg", votes: 25 },
             ],
             nul: 3

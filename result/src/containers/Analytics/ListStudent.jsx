@@ -99,7 +99,7 @@ export default function ListStudent() {
                 <div style={{ display: "flex", flexDirection: "row", justifyContent: "center", alignItems: "center", marginBottom:5}}>
                     <Paper sx={{width:'22%', height:"80%",position: "absolute", top: 380, left:75}} elevation={2}>
                     <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', padding: 5 }}>
-                <Avatar src="https://media.licdn.com/dms/image/D4E03AQGa9sTQUC8tRQ/profile-displayphoto-shrink_800_800/0/1697301555895?e=1714608000&v=beta&t=_DEUTCJy5OuLH_t9_uRLim9z19ao22kb1FMfxUqakSU" alt="Bio Paul" sx={{ width: 320, height: 500, borderRadius:3, background:"#000", marginTop:-1 }} />
+                <Avatar src="https://biopaulkobena.netlify.app/images/portfolio-bio.png" alt="Bio Paul" sx={{ width: 320, height: 500, borderRadius:3, background:"#000", marginTop:-1 }} />
                 <Typography variant="h6" sx={{ textAlign: "center", fontFamily: "Montserrat", fontWeight: "800", fontSize:"2rem", color:"#FF7200" }}>
                  Bio Paul
                 </Typography>

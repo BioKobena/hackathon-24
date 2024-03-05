@@ -25,7 +25,7 @@ export default function ListStudent() {
     const [swalProps, setSwalProps] = useState({});
 
     useEffect(() => {
-        axios.get('http://localhost:8000/electeurs')
+        axios.get('http://192.168.1.54:8000/electeurs')
             .then((data) => {
                 setElecteurs(data.data.electeurs)
                 console.log(data)

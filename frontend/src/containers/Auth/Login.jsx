@@ -30,7 +30,7 @@ export default function Login() {
 
         try {
             setBtnLoading(true);
-            const response = await axios.post('http://localhost:8000/authSite', { identifiant, password });
+            const response = await axios.post('http://192.168.1.54:8000/authSite', { identifiant, password });
             console.log(response);
             const data = response.data;
             const params = response.data.site;

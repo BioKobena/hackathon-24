@@ -28,7 +28,7 @@ export default function Login() {
 
         try {
             setBtnLoading(true)
-            const response = await axios('http://localhost:8000/authSite', {
+            const response = await axios('http://192.168.1.54:8000/authSite', {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json',

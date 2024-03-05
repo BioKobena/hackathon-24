@@ -27,7 +27,7 @@ function Dashboard() {
             toast.success(`Bienvenue sur la page d'enrôllement de ${params.localite}`);
         }
         // console.log(params)
-        axios.get('http://localhost:8000/electeurs')
+        axios.get('http://192.168.1.54:8000/electeurs')
             .then((data) => {
                 setElecteur(data.data.electeurs.length)
             }).catch((error) => {

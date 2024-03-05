@@ -62,7 +62,7 @@ export default function Etudiant() {
       return; // Arrête la fonction si la longueur est incorrecte
     }
     try {
-      const response = await axios.post('http://localhost:8000/createElecteur', formData);
+      const response = await axios.post('http://192.168.1.54:8000/createElecteur', formData);
 
       if (response.data.success) {
         Swal.fire({
